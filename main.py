@@ -23,6 +23,9 @@ def verify_password(username: str, password: str) -> bool:
 
 
 def sign_data(data: str) -> str:
+    '''
+    Подписывает cookie файлы username
+    '''
     return hmac.new(
         SECRET_KEY.encode(),
         msg=data.encode(),
